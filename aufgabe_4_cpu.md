@@ -1,4 +1,4 @@
-### Aufgabe zur Instruction Set Architecture
+### Aufgabe zu CPU basics 
 
 Nutzen Sie die gleichen Einstellungen wie in [Aufgabe 1](https://github.com/bamalte/ETI-skript-beispiele/blob/main/aufgabe_1_ISA.md).
 
