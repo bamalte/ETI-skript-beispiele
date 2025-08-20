@@ -84,7 +84,7 @@ branch_label:
 
 <details>
 <summary>💡 Lösung</summary>
-- In einer Übersicht über RiscV Instruktionen wie diese [hier](https://msyksphinz-self.github.io/riscv-isadoc/html/rvi.html#jal) können Sie die Lösung der Beschreibung von jal im Vergleich zu beq entnehmen.
+- In einer Übersicht über RiscV Instruktionen wie diese [hier](https://msyksphinz-self.github.io/riscv-isadoc/html/rvi.html#jal), können Sie die Lösung der Beschreibung von jal im Vergleich zu beq entnehmen.
 </details>
 
 ### Aufgabe 3: Branch (bedingt)
@@ -164,4 +164,4 @@ end:
 - Die Schleife durchläuft 5 Iterationen.
 - Der Program Counter springt bei jedem blt zurück, solange die Bedingung erfüllt ist.
 - Am Ende enthält s0 die Summe 1+2+3+4+5 = 15.
-<details>
+</details>
