@@ -34,7 +34,7 @@ loop:
   
 <details>
 <summary>💡 Lösung</summary>
-Da der Programmcode bei einem jump in einen anderen Bereich des Programms springt, wurde in der Lösung in x3 und x1 die Rücksprungadressen gespeichert, das macht in einem loop nicht unbedingt sinn, dient aber zur demonstration.
+Da der Programmcode bei einem jump in einen anderen Bereich des Programms springt, wurde in der Lösung in x3 und x1 die Rücksprungadressen gespeichert, das ergibt in einem loop nicht unbedingt Sinn, dient daher zur demonstration.
 
 Ein normales Vorgehen könnte sein:
 
@@ -61,17 +61,15 @@ branch_label:
     nop
 ```
 
-•	Der PC springt immer, da x5 >= x5 immer gilt.
+- Der PC springt immer, da x5 >= x5 immer gilt.
 </details>
 
 ### Aufgabe 2.2:
-- Wird beim branch auch eine Rücksprungadresse gespeichert?
+1. Wird beim branch auch eine Rücksprungadresse gespeichert?
 
 <details>
 <summary>💡 Lösung</summary>
-In einer Übersicht über RiscV Instruktionen wie diese [hier](https://msyksphinz-self.github.io/riscv-isadoc/html/rvi.html#jal) können Sie die Lösung der Beschreibung von jal im Vergleich zu beq entnehmen.
-
-<details>
+- In einer Übersicht über RiscV Instruktionen wie diese [hier](https://msyksphinz-self.github.io/riscv-isadoc/html/rvi.html#jal) können Sie die Lösung der Beschreibung von jal im Vergleich zu beq entnehmen.
 
 ### Aufgabe 3: Branch (bedingt)
 1.	Initialisieren Sie zwei Register, z. B. x5 = 5, x6 = 5.
