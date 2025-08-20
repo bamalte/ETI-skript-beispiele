@@ -41,6 +41,21 @@ Ein normales Vorgehen könnte sein:
 In RISC-V ist standardmäßig das Register x1, auch ra (return address) genannt, für die Rücksprungadresse vorgesehen.
 - Bei einem jal x1, label wird die Adresse der nächsten Instruktion in x1 gespeichert.
 - Anschließend kann man mit jalr x0, x1, 0 oder ähnlichem zur Rücksprungadresse zurückkehren.
+
+```asm
+_start:
+    # Hauptprogramm
+    li t0, 10        # Beispielwert setzen
+    jal x1, subroutine  # Springe zu subroutine und speichere Rückadresse in x1
+    addi t0, t0, 5   # Fortsetzung nach Rückkehr
+
+end:
+    nop              # Programmende
+
+subroutine:
+    addi t0, t0, 1   # Beispieloperation in Subroutine
+    jalr x0, x1, 0   # Rücksprung zur Adresse in x1 (x0 als Ziel heißt kein neues x-Register)
+```
 </details>
 
 
@@ -70,6 +85,7 @@ branch_label:
 <details>
 <summary>💡 Lösung</summary>
 - In einer Übersicht über RiscV Instruktionen wie diese [hier](https://msyksphinz-self.github.io/riscv-isadoc/html/rvi.html#jal) können Sie die Lösung der Beschreibung von jal im Vergleich zu beq entnehmen.
+</details>
 
 ### Aufgabe 3: Branch (bedingt)
 1.	Initialisieren Sie zwei Register, z. B. x5 = 5, x6 = 5.
@@ -118,7 +134,7 @@ branch_label:
 
 </details>
 
-### Aufgabe 6: For-Schleife (bedingter Loop)
+### Aufgabe 5: For-Schleife (bedingter Loop)
 1. Initialisieren Sie einen Zähler `t0 = 0` und ein Ergebnisregister `s0 = 0`.
 2. Implementieren Sie eine Schleife, die 5-mal durchläuft:
    - Erhöhen Sie den Zähler `t0` um 1.
