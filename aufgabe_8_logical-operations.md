@@ -7,7 +7,7 @@ In dieser Aufgabe üben Sie **logischen Instruktionen** aus der RISC-V Basis-ISA
 ### Anleitung
 1. Kopieren Sie den folgenden Code in [Ripes](https://ripes.me/).  
 2. Steppen Sie durch das Programm und beobachten Sie, wie sich die Registerwerte verändern.  
-3. Nutzen Sie die Ansicht **Processor**.  
+3. Nutzen Sie die Ansicht **Editor** (Sie können unten rechts auch das Zahlenformat der Register zu binary ändern).
 4. Beobachten Sie was die Instruktionen machen
 
 ---
