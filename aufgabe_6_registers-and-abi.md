@@ -1,6 +1,6 @@
-### Aufgabe zu addressing modes
+### Aufgabe zu registers und dem abi standard
 
-In dieser Aufgabe wird gezeigt, wie Register zur Übergabe von Paramtern zwischen Funktionen genutzt werden können, sowie Registerwerte korrekt von dem Calle gesaved werden. Hierzu wird der Stack eingesetzt, wenn Sie noch nicht wissen was der Stack ist, kann das etwas verwirrend sein. Kommen Sie dazu vielleicht später nochmal zu der Aufgabe zurück.
+In dieser Aufgabe wird gezeigt, wie Register zur Übergabe von Paramdtern zwischen Funktionen genutzt werden können, sowie Registerwerte korrekt von dem Calle gesaved werden. Hierzu wird der Stack eingesetzt, wenn Sie noch nicht wissen was der Stack ist, kann das etwas verwirrend sein. Kommen Sie dazu vielleicht später nochmal zu der Aufgabe zurück.
 
 ### Anleitung
 - Fügen Sie den Programmcode in [Ripes](https://ripes.me/) in den Editor ein.
