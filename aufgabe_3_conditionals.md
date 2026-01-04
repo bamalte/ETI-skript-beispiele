@@ -7,7 +7,7 @@ In dieser Aufgabe lernen Sie **Jumps** und **Branches** (bedingte Sprünge) kenn
 ### Aufgabe 1: Jump (bedingungslos)
 
 1. Schreiben Sie ein RISC-V Programm, das mit einem **bedingungslosen Jump** (`JAL`) zu einem Label `loop` springt.  
-2. Innerhalb von `loop` fügen Sie einen `NOP` ein und springen danach wieder zurück zum Start.  
+2. Innerhalb von `loop` fügen Sie `NOP`s ein und springen danach wieder zurück zum Start.  
 3. Beobachten Sie im Simulator ([Ripes](https://ripes.me/)) den **Program Counter**.
 
 <details>
@@ -30,17 +30,17 @@ loop:
 </details>
 
 ### Aufgabe 1.1:
-- Was passiert mit dem Werten in x3 und x1?
+- Was passiert mit den Werten in x1?
   
 <details>
 <summary>💡 Lösung</summary>
-Da der Programmcode bei einem jump in einen anderen Bereich des Programms springt, wurde in der Lösung in x3 und x1 die Rücksprungadressen gespeichert, das ergibt in einem loop nicht unbedingt Sinn, dient daher zur demonstration.
+Da der Programmcode bei einem jump in einen anderen Bereich des Programms springt, wurde in der Lösung in x1 die Rücksprungadresse gespeichert.
 
 Ein normales Vorgehen könnte sein:
 
 In RISC-V ist standardmäßig das Register x1, auch ra (return address) genannt, für die Rücksprungadresse vorgesehen.
 - Bei einem jal x1, label wird die Adresse der nächsten Instruktion in x1 gespeichert.
-- Anschließend kann man mit jalr x0, x1, 0 oder ähnlichem zur Rücksprungadresse zurückkehren.
+- Anschließend kann mit jalr x0, x1, 0 oder ähnlichem zur Rücksprungadresse zurückgekehrt werden.
 
 ```asm
 _start:
@@ -48,13 +48,14 @@ _start:
     li t0, 10        # Beispielwert setzen
     jal x1, subroutine  # Springe zu subroutine und speichere Rückadresse in x1
     addi t0, t0, 5   # Fortsetzung nach Rückkehr
-
-end:
-    nop              # Programmende
+    jal end
 
 subroutine:
     addi t0, t0, 1   # Beispieloperation in Subroutine
     jalr x0, x1, 0   # Rücksprung zur Adresse in x1 (x0 als Ziel heißt kein neues x-Register)
+    
+end:
+    nop
 ```
 </details>
 
@@ -82,7 +83,7 @@ branch_label:
 ### Aufgabe 2.2:
 1. Wird beim branch auch eine Rücksprungadresse gespeichert?
 
-<details>
+ƒ<details>
 <summary>💡 Lösung</summary>
 - In einer Übersicht über RiscV Instruktionen wie diese [hier](https://msyksphinz-self.github.io/riscv-isadoc/html/rvi.html#jal), können Sie die Lösung der Beschreibung von jal im Vergleich zu beq entnehmen.
 </details>
