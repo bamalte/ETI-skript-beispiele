@@ -83,7 +83,7 @@ branch_label:
 ### Aufgabe 2.2:
 1. Wird beim branch auch eine Rücksprungadresse gespeichert?
 
-ƒ<details>
+<details>
 <summary>💡 Lösung</summary>
 - In einer Übersicht über RiscV Instruktionen wie diese [hier](https://msyksphinz-self.github.io/riscv-isadoc/html/rvi.html#jal), können Sie die Lösung der Beschreibung von jal im Vergleich zu beq entnehmen.
 </details>
@@ -150,11 +150,11 @@ branch_label:
 _start:
     li t0, 0        # Schleifenzähler auf 0 setzen
     li s0, 0        # Ergebnisregister auf 0 setzen
+    li   t1, 5      # Schleifenobergrenze
 
 loop:
     addi t0, t0, 1  # Zähler erhöhen
     add  s0, s0, t0 # Wert zum Ergebnis addieren
-    li   t1, 5      # Schleifenobergrenze
     blt  t0, t1, loop  # Springe zurück, solange t0 < 5
 
 end:
